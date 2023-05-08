@@ -39,7 +39,7 @@ Notes with Coding it will help us to understand easier way!!
 *   School Students
 
 # High-level Languages
-### High-level languages, like C, C++, JAVA,Python etc., are very near to English. It makes programming process easy. However, it must be translated into machine language before execution. This translation process is either conducted by either a compiler or an interpreter. Also known as source code.
+###### High-level languages, like C, C++, JAVA,Python etc., are very near to English. It makes programming process easy. However, it must be translated into machine language before execution. This translation process is either conducted by either a compiler or an interpreter. Also known as source code.
 
 # Machine Code
 ### Machine languages are very close to the hardware. Every computer has its machine language. A machine language programs are made up of series of binary pattern. (Eg. 110110) It represents the simple operations which should be performed by the computer. Machine language programs are executable so that they can be run directly.
