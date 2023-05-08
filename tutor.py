@@ -460,23 +460,24 @@ o1.age = 22
 print(o1.msg)  
 # print(o1.__dict__)
 """
-# Getter Setter using Property decorator Method!!
+# Getter Setter using Property decorator Method!!!
 print("Getter and Setter!! ====> Data Encapsulation")
 
 
 class Dance:
     def __init__(self, dname):
-        self._dname = dname  #_(name)=> private variable
+        self._dname = dname  # _(name)=> private variable
 
     def Mem(self):
         return self._dname + " Kumar"
+
     @property
     def dname(self):
         return self._dname + " Raj"
-    @dname.setter
-    def dname(self,d):
-        self._dname=d
 
+    @dname.setter
+    def dname(self, d):
+        self._dname = d
 
 
 o1 = Dance("Arun")
@@ -485,3 +486,33 @@ print(o1.Mem())
 o1.dname = "Kavin"
 print(o1.dname)
 print(o1.Mem())
+
+print("===========================================")
+
+
+class Student:
+    def __init__(self, total):
+        self._total = total
+
+    def average(self):
+        return self._total / 5
+
+    def getter(self):  # Here getter is not an keyword we can use the any word!
+        return self._total
+
+    def setter(self, t):  # Similarly here setter is also an not a keyword we can use the any word!
+        if t < 0 or t > 500:
+            print("Invalid Total! Check the marks!!")
+        else:
+            self._total = t
+
+    total = property(getter, setter)
+
+
+o1 = Student(450)
+print("Total   : ", o1.total)
+print("Average : ", o1.average())
+o1.total = 2500
+print("Total   : ", o1.total)
+# print(o1.__dict__)
+print("Average : ", o1.average())
