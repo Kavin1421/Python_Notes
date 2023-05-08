@@ -39,14 +39,13 @@ Notes with Coding it will help us to understand easier way!!
 *   School Students
 
 # High-level Languages
-###### High-level languages, like C, C++, JAVA,Python etc., are very near to English. It makes programming process easy. However, it must be translated into machine language before execution. This translation process is either conducted by either a compiler or an interpreter. Also known as source code.
+##### High-level languages, like C, C++, JAVA,Python etc., are very near to English. It makes programming process easy. However, it must be translated into machine language before execution. This translation process is either conducted by either a compiler or an interpreter. Also known as source code.
 
 # Machine Code
-### Machine languages are very close to the hardware. Every computer has its machine language. A machine language programs are made up of series of binary pattern. (Eg. 110110) It represents the simple operations which should be performed by the computer. Machine language programs are executable so that they can be run directly.
+##### Machine languages are very close to the hardware. Every computer has its machine language. A machine language programs are made up of series of binary pattern. (Eg. 110110) It represents the simple operations which should be performed by the computer. Machine language programs are executable so that they can be run directly.
 
 # Compiler
-### A Compiler transforms code written in a high-level programming language into a machine code or any other Intermediate code.It converts the text that a programmer writes into a format the CPU can understand.The conversion manner is diffrent.It convers the Entire source code in one go and reports all the errors of the program along with the line numbers.After all the error are removed,the program is recompiled and after that the Compiler is no needed in memory as the object program is available.
+##### A Compiler transforms code written in a high-level programming language into a machine code or any other Intermediate code.It converts the text that a programmer writes into a format the CPU can understand.The conversion manner is diffrent.It convers the Entire source code in one go and reports all the errors of the program along with the line numbers.After all the error are removed,the program is recompiled and after that the Compiler is no needed in memory as the object program is available.
 
 # Interpreter
-### The interpreter converts the source code line-by-line during Run Time,translates it into machine code or virtual machine code. Interpreter allows evaluation and modification of the program while it is executing.if there is error in any line,it reports it at the same time and program executio cannot resume untill the errror is rectified.Interprerer must always be present in the memory every time the program is run.it is first interpreted and then executed
-
+##### The interpreter converts the source code line-by-line during Run Time,translates it into machine code or virtual machine code. Interpreter allows evaluation and modification of the program while it is executing.if there is error in any line,it reports it at the same time and program executio cannot resume untill the errror is rectified.Interprerer must always be present in the memory every time the program is run.it is first interpreted and then executed
