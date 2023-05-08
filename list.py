@@ -1,4 +1,4 @@
-"""
+
 # 1. Write a Python program to sum all the items
 a=[1,2,3,4,5]
 sum=0
@@ -105,4 +105,3 @@ for i in range(1,30):
 	l.append(i**2)
 print(l[:5])
 print(l[-5:])
-"""
