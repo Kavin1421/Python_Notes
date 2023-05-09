@@ -1,4 +1,4 @@
-"""
+
 a = [1, 2, 3, 4]
 for i in a:
     print(i)
@@ -888,7 +888,6 @@ b2.loan()
 b2.credit()
 b2.check()
 
-"""
 #File Handling
 try:
     file=open('test.txt',"r")
