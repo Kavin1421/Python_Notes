@@ -647,7 +647,7 @@ m1 = RedmiNote7()
 m1.alldet() 
 m1.con_det() 
 
-"""
+
 
 #Multiple Inheritance
 
@@ -680,3 +680,225 @@ s1.sdet()
 
 
 
+# Multilevel Inheritance!
+class A:
+    def dog(self):
+        print("Barking Dogs")
+
+    def cat(self):
+        print("Seldom Bites")
+
+
+class B(A):
+    def lion(self):
+        print("King of Forest")
+
+    def tiger(self):
+        print("Simply Waste !")
+
+
+class C(B):
+   
+    def cow(self):
+        print("Milk!!")
+
+    def buf(self):
+        print("Pure Milk!!")
+ 
+
+o1 = C()
+o1.cow()
+o1.buf()
+o1.lion()
+o1.tiger()
+o1.cat()
+o1.dog()
+
+
+# Function Overriding!!!
+class Employee:
+    def wrks(self):
+        self.wrk = 50
+
+    def show(self):
+        print("Total working hrs are :", self.wrk, "hrs")
+
+
+class Trainee(Employee):
+    def wrks(self):
+        self.wrk = 90
+
+    def reset(self):
+        super().wrks()
+
+
+o1 = Employee()
+o1.wrks()
+o1.show()
+o2 = Trainee()
+o2.wrks()
+o2.show()
+# After Reset!!!!!
+o2.reset()
+o2.show()
+
+
+#Dimond Problem 
+
+class A:
+    def dis(self):
+        print("I'm Displaying from the Class ==> A")
+class B(A):
+    def dis(self):
+        print("I'm Displaying from the Class ==> B")
+class C(A):
+    def dis(self):
+        print("I'm Displaying from the Class ==> C")
+class D(B,C):
+    def dis(self):
+        print("I'm Displaying from the Class ==> D")
+
+d1=D()
+d1.dis()
+
+
+# polymorphism
+# Operator Overloading
+
+
+class Addition:
+    def __init__(self, a):
+        self.a = a
+
+    def __add__(o1, o2):
+        return o1.a + o2.a
+
+    def __sub__(o1, o2):
+        return o1.a - o2.a
+
+
+o1 = Addition(10)
+o2 = Addition(20)
+
+print("Sum of Two Objects  :", (o1 + o2))
+print("Diff of Two Objects :", (o1 - o2))
+
+"""
+"""
+Operator	Magic Method
++	__add__(self, other)
+-	__sub__(self, other)
+*	__mul__(self, other)
+/	__truediv__(self, other)
+//	__floordiv__(self, other)
+%	__mod__(self, other)
+**	__pow__(self, other)
+>>	__rshift__(self, other)
+<<	__lshift__(self, other)
+&	__and__(self, other)
+|	__or__(self, other)
+^	__xor__(self, other)
+ 
+Comparison Operators :
+Operator	Magic Method
+<	__LT__(SELF, OTHER)
+>	__GT__(SELF, OTHER)
+<=	__LE__(SELF, OTHER)
+>=	__GE__(SELF, OTHER)
+==	__EQ__(SELF, OTHER)
+!=	__NE__(SELF, OTHER)
+ 
+Assignment Operators :
+Operator	Magic Method
+-=	__ISUB__(SELF, OTHER)
++=	__IADD__(SELF, OTHER)
+*=	__IMUL__(SELF, OTHER)
+/=	__IDIV__(SELF, OTHER)
+//=	__IFLOORDIV__(SELF, OTHER)
+%=	__IMOD__(SELF, OTHER)
+**=	__IPOW__(SELF, OTHER)
+>>=	__IRSHIFT__(SELF, OTHER)
+<<=	__ILSHIFT__(SELF, OTHER)
+&=	__IAND__(SELF, OTHER)
+|=	__IOR__(SELF, OTHER)
+^=	__IXOR__(SELF, OTHER)
+ 
+Unary Operators :
+Operator	Magic Method
+-	__NEG__(SELF, OTHER)
++	__POS__(SELF, OTHER)
+~	__INVERT__(SELF, OTHER)
+ 
+
+
+# Abstract Base Class
+from abc import ABC, abstractmethod
+
+
+class Reserve_Bank:
+    @abstractmethod
+    def greet(self):
+        pass
+
+    @abstractmethod
+    def loan(self):
+        pass
+
+    @abstractmethod
+    def credit(self):
+        pass
+
+
+class HDFC(Reserve_Bank):
+    def greet(self):
+        print("Welcome to HDFC Bank")
+
+    def loan(self):
+        print("We Provude Loan Facility")
+
+    def credit(self):
+        print("We providing the Credit based Community")
+
+    def Passbook(self):
+        print("Passbook Recived")
+
+
+class ICICI(Reserve_Bank):
+    def greet(self):
+        print("Welcome to ICICI Bank")
+
+    def loan(self):
+        print("We Provude Loan Facility with Low Interest")
+
+    def credit(self):
+        print("We providing the Credit based Community")
+
+    def check(self):
+        print("Checkbook Recived")
+
+
+b1 = HDFC()
+b1.greet()
+b1.loan()
+b1.credit()
+b1.Passbook()
+b2 = ICICI()
+b2.greet()
+b2.loan()
+b2.credit()
+b2.check()
+
+"""
+#File Handling
+try:
+    file=open('test.txt',"r")
+    print(file.read())
+except:
+    print("Unable to fetch the file!!")
+
+else:
+    print("File readed successfully!!!")
+    file.close()
+
+finally:
+    print("Avulothan")
