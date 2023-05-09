@@ -459,7 +459,7 @@ print(o1.msg)
 o1.age = 22
 print(o1.msg)  
 # print(o1.__dict__)
-"""
+
 # Getter Setter using Property decorator Method!!!
 print("Getter and Setter!! ====> Data Encapsulation")
 
@@ -512,7 +512,171 @@ class Student:
 o1 = Student(450)
 print("Total   : ", o1.total)
 print("Average : ", o1.average())
-o1.total = 2500
+o1.total = 250
 print("Total   : ", o1.total)
 # print(o1.__dict__)
 print("Average : ", o1.average())
+
+# Class method Decorator
+
+
+class Student:
+    count = 0
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        Student.count += 1
+
+    def Details(self):
+        print("Name : ", self.name, " || Age : ", self.age)
+    @classmethod
+    def times(cls):
+        # print(Student.count,"Times Object Created!!")
+        return cls.count
+
+
+o1 = Student("Abdullah", 23)
+o1.Details()
+print(o1.times())
+o1 = Student("Balaji S", 20)
+o1.Details()
+print(o1.times(),"Times Object Created!!")
+
+# Static Method
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def details(self):
+        print("Name:" , self.name + "  Age:", self.age)
+
+    @staticmethod  # It is used to mainly run the method without using the self keyword!!
+    def message(): 
+        print("Vanakam!!!")
+ 
+
+s1 = Student("Arun", 23)
+s1.details()
+s1.message()
+s2 = Student("Kumar", 20)
+s2.details()
+s2.message()
+
+
+
+# Abstraction ===> Abstraction is an process of the providing only  the essential details to the world and hiding
+# the background details , to represent the needed information in program without presenting the details!!
+# =========================================================================================
+# Encaptulation is an wrapping upof code and data  together into the single unit !!
+
+
+class Library:
+    def __init__(self, books):
+        self.books = books
+
+    def list_books(self):
+        print("Available Books!")
+        for books in self.books:
+            print(books)
+
+    def borrow_books(self, borrow_books):
+        if borrow_books in self.books:
+            print("Books are:", borrow_books)
+            self.books.remove(borrow_books)
+        else:
+            print("None of Books are Available")
+
+    def received_books(self, received_books):
+        if received_books not in self.books:
+            print("You have returned book")
+            self.books.append(received_books)
+        else:
+            print("Enter Valid Book Name!!")
+
+
+books = ["c", "c++", "java", "python"]
+o1 = Library(books)
+# print(Library.__dict__)
+msg = #'''
+    1.Display Books
+    2.Borrow books
+    3.Return books
+    #'''
+while True:
+    print(msg)
+    ch = int(input("Enter your Choice : "))
+    if ch == 1:
+        o1.list_books()
+    elif ch == 2:
+        book = input("Enter the Borrowed Book Name :")
+        o1.borrow_books(book)
+    elif ch == 3:
+        book = input("Enter the Returned Book Name :")
+        o1.received_books(book)
+    else:
+        print("Invalid Option!!!")
+        print("Thank You! For Visiting Us!!")
+        exit()
+
+# Single Inheritance
+class Redmi:
+    company = "Xiomi"
+    website = "www.xiomi.com"
+    contact = "+91 9343498983"
+
+    def con_det(self):
+        print("China Kuruku Santhu,Main Road!")
+
+
+class RedmiNote7(Redmi):
+    def __init__(self):
+        self.name = "Redmi Note 7 "
+        self.model = 2020
+
+    def alldet(self):
+        print("Comapant Name: " , self.name)
+        print("Comapant model: " , self.model)
+        print("Comapant company: " , self.company)
+        print("Comapant website: " , self.website)
+        print("Comapant contact: " , self.contact)
+
+
+m1 = RedmiNote7() 
+m1.alldet() 
+m1.con_det() 
+
+"""
+
+#Multiple Inheritance
+
+class Father:
+    fname="Kuppusamy"
+    fage=51
+
+class Mother:
+    mname="Kalishwari"
+    mage=45
+
+class Son(Father,Mother):
+    def __init__(self):
+        self.sname="Kavin"
+        self.sage=21
+    def fdet(self):
+        print(self.fname)
+        print(self.fage)
+    def mdet(self):
+        print(self.mname)
+        print(self.mage)
+    def sdet(self):
+        print(self.sname)
+        print(self.sage)
+
+s1=Son()
+s1.fdet()
+s1.mdet()
+s1.sdet()
+
+
+
