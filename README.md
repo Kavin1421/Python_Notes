@@ -1,6 +1,6 @@
 # Python_Notes
 
-Notes with Coding it will help us to understand easier way!!
+Notes with Coding it will help us to understand the python in easier way!!
 ## -by KavinVijay
 # Python
 
